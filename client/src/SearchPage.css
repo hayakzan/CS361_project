@@ -1,0 +1,187 @@
+/* SearchPage.css */
+.search-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.search-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* wrap the dropdown + icon */
+.diet-filter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* keep the select full width */
+.diet-filter {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* small gap before the info icon */
+.tooltip-icon {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* the tooltip bubble */
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  position: absolute;
+  top: -8px;
+  left: 100%;
+  transform: translateX(8px);
+  width: 220px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* show the tooltip when hovering the container or focusing the icon */
+.diet-filter-container:hover .tooltip-text,
+.tooltip-icon:focus+.tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-end;
+}
+
+.search-button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.results-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.results-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.recipe-card {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.recipe-title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+/* 1) Logo link: keep it small & inline */
+.breadcrumb .logo-link img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  /* space before the “Home” text */
+}
+
+/* 2) Remove default link underline from the icon */
+.breadcrumb .logo-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* 3) Slight hover feedback */
+.breadcrumb .logo-link img:hover {
+  opacity: 0.8;
+}
+
+/* 4) Keep your existing breadcrumb links consistent */
+.breadcrumb a {
+  color: #007bff;
+  /* or whatever your link color is */
+  text-decoration: none;
+  /* no underline */
+  font-size: 0.9rem;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* show the latency below the button, in italics */
+.search-latency {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
